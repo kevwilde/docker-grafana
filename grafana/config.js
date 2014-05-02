@@ -12,7 +12,7 @@ function (Settings) {
      * elasticsearch url:
      * For Basic authentication use: http://username:password@domain.com:9200
      */
-    elasticsearch: "/elasticsearch",
+    elasticsearch: "http://localhost:9200",
 
     /**
      * graphite-web url:
@@ -21,7 +21,7 @@ function (Settings) {
      * in nginx or apache for cross origin domain sharing to work (CORS).
      * Check install documentation on github
      */
-    graphiteUrl: "/graphite",
+    graphiteUrl: "GRAPHITE_URL",
 
     /**
      * Multiple graphite servers? Comment out graphiteUrl and replace with
@@ -48,4 +48,3 @@ function (Settings) {
     ]
   });
 });
-
