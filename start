@@ -1,6 +1,11 @@
 #! /bin/bash
 
+if test -z "$1"; then
+  echo "usage: ./start http://my-graphite-server/"
+  exit 1
+fi
+
 docker kill grafana
 docker rm grafana
 
-docker run -d -p 80:80 --name grafana keeth/grafana 
+docker run -d -p 80:80 --name grafana -e GRAPHITE_URL=$1 keeth/grafana

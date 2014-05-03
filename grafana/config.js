@@ -12,7 +12,7 @@ function (Settings) {
      * elasticsearch url:
      * For Basic authentication use: http://username:password@domain.com:9200
      */
-    elasticsearch: "http://localhost:9200",
+    elasticsearch: "/elasticsearch",
 
     /**
      * graphite-web url:
